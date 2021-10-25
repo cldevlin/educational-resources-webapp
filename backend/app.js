@@ -1,27 +1,34 @@
 const express = require('express');
 const app = express();
+const cors = require("cors");
+const helmet = require("helmet");
+
+const resources = require("./routes/resources");
 
 // console.log('process.env.MYSQL_HOST', process.env.MYSQL_HOST);
 // MYSQL_PORT=5432
 
 // create connection to MySQL
 const mysql = require('mysql2');
-const connection = mysql.createConnection({
+const db = mysql.createConnection({
   host: 'localhost',
   user: 'root',
   password: 'root',
   database: 'original_dev_test'
 });
-connection.connect((err) => {
+db.connect((err) => {
   if (err) throw err;
   console.log('Connected!');
 });
 
+app.use(cors());
+app.use(helmet());
+app.use("/api", resources(db));
 
 app.get('/', function (req, res) {
   res.send('Hello World!');
 });
 
 app.listen(3001, function () {
-  console.log('Example app listening on port 3001!');
+  console.log('Listening on port 3001!');
 });
