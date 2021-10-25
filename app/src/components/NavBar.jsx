@@ -5,7 +5,7 @@ import Register from './Register.jsx'
 export default function Navbar(props) {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light d-flex justify-content-between">
-      <a class="navbar-brand" href="#">Resources</a>
+      <a className="navbar-brand" href="/">Resources</a>
       <div>
         <Login />
         <Register />
