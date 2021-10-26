@@ -1,7 +1,5 @@
-// import React, { useState, useEffect } from "react";
 import Login from './Login.jsx'
 import Register from './Register.jsx'
-// import 'bootstrap/dist/css/bootstrap.css';
 
 export default function Navbar(props) {
   return (

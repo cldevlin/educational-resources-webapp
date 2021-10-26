@@ -9,7 +9,6 @@ export default function useApplicationData() {
   useEffect(() => {
     axios.get('/api/resources')
       .then((res) => {
-        // console.log('res.data (useApplicationData.js)', res.data);
         setState(prev => ({ ...prev, resources: res.data }));
       })
   }, [])

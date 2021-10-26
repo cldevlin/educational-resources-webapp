@@ -2,7 +2,6 @@ import ResourceListItem from './ResourceListItem.jsx'
 
 export default function ResourceList(props) {
   const { resources } = props;
-  // console.log('resources (ResourceList.jsx)', resources);
   const resourceList = resources.map((resourceData) => {
     return <ResourceListItem
       key={resourceData.id}

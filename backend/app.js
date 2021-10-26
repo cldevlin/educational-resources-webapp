@@ -5,8 +5,6 @@ const helmet = require("helmet");
 
 const resources = require("./routes/resources");
 
-// console.log('process.env.MYSQL_HOST', process.env.MYSQL_HOST);
-// MYSQL_PORT=5432
 
 // create connection to MySQL
 const mysql = require('mysql2');

@@ -1,6 +1,3 @@
-// import alloprof from '../assets/images/alloprof.jpg'
-
-
 export default function ResourceListItem(props) {
   const { image, name, description, slug } = props;
 
