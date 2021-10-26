@@ -1,6 +1,6 @@
 export default function Register(props) {
   return (
-    <a className="btn border p-2 mx-2 bd-highlight" href="/register">
+    <a className="register-button btn px-1 mx-1" href="/register">
       Register
     </a>
   )

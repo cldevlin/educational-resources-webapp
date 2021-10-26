@@ -2,8 +2,47 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Rubik:wght@500&display=swap');
 
 
-.App {
-  /* text-align: center; */
+.navbar {
+  background-color: #a8dadc;
+  font-family: rubik;
+  font-size: 1.5em;
+  /* color: #e63946; */
+}
+
+#logo {
+  font-size: 1.2em;
+  /* color: #e63946; */
+  color: black;
+}
+
+.navbar-brand:hover {
+  text-shadow: 0 0 1px #000000;
+}
+
+.right-side-buttons {
+  /* color: #e63946; */
+}
+
+.register-button:hover {
+  text-shadow: 0 0 1px #000000;
+}
+.login-button:hover {
+  text-shadow: 0 0 1px #000000;
+}
+
+.resource-list-item {
+  height: 300px; 
+  font-family: Lato; 
+  text-align: left;
+}
+
+.list-item-title {
+  text-decoration: none;
+  /* color: #a8dadc; */
+}
+
+/* .App {
+  text-align: center;
 }
 
 .App-logo {
@@ -39,4 +78,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
