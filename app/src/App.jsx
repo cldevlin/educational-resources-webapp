@@ -7,7 +7,6 @@ import Navbar from './components/NavBar';
 import Search from './components/Search';
 import ResourceList from './components/ResourceList';
 import ResourceView from './components/ResourceView';
-// import { getResources } from "./helpers/selectors"
 import useApplicationData from "./hooks/useApplicationData";
 import { getResource } from './helpers/selectors';
 
@@ -15,11 +14,11 @@ export default function App() {
   const { state } = useApplicationData()
   // const [resources, setResources] = useState([]);
 
-  useEffect(() => {
-    // const resources = getResources();
-    // setResources(prev => [...prev, ...state.resources])
-    console.log('state.resources', state.resources);
-  }, [])
+  // useEffect(() => {
+  //   // const resources = getResources();
+  //   // setResources(prev => [...prev, ...state.resources])
+  //   console.log('state.resources', state.resources);
+  // }, [])
   return (
     <main className="App">
       <Switch>
@@ -30,7 +29,7 @@ export default function App() {
         </Route>
         <Route path='/resources/:slug'>
           <Navbar />
-          <ResourceView getResource={getResource} state={state} />
+          {state.resources[0] && <ResourceView getResource={getResource} state={state} />}
         </Route>
       </Switch>
     </main>
